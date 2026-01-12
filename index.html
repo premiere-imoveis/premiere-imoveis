@@ -7,18 +7,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#00403e">
 
-<!-- PWA -->
+<!-- ================= PWA / ANDROID ================= -->
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="img/logo.png">
+
+<!-- ================= IOS (IPHONE) ================= -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Premiere">
+<link rel="apple-touch-icon" href="img/logo.png">
 
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: url("img/fundodapremiere.jpeg") center/cover no-repeat; /* imagem de fundo */
+    background: url("img/fundodapremiere.jpeg") center/cover no-repeat;
     text-align: center;
     margin: 0;
 }
 
-/* TOPO FIXO */
+/* TOPO */
 .topo {
     position: sticky;
     top: 0;
@@ -45,10 +52,9 @@ body {
     color: #fff;
 }
 
-.topo-content a img {
+.topo-content img {
     max-height: 90px;
     margin-bottom: 8px;
-    cursor: pointer;
 }
 
 .topo-content h1 {
@@ -62,6 +68,7 @@ body {
     opacity: 0.9;
 }
 
+/* CONTEÚDO */
 .conteudo {
     padding: 40px 20px;
 }
@@ -82,7 +89,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     overflow: hidden;
@@ -130,13 +136,13 @@ body {
 }
 
 .footer-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 48px;
     height: 48px;
     background: #006b67;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.25s ease, background 0.25s ease;
 }
 
@@ -166,9 +172,9 @@ body {
 
 <body>
 
+<!-- TOPO -->
 <div class="topo">
     <div class="topo-content">
-        <!-- LOGO COM LINK -->
         <a href="https://www.imoveispremiere.com.br" target="_blank">
             <img src="img/logo.png" alt="Premiere Imóveis">
         </a>
@@ -177,9 +183,10 @@ body {
     </div>
 </div>
 
+<!-- MENU -->
 <div class="conteudo">
     <div class="menu">
-        <a href="locação.html" class="card"><img src="img/locacao.png"></a>
+        <a href="locacao.html" class="card"><img src="img/locacao.png"></a>
         <a href="vendas.html" class="card"><img src="img/vendas.png"></a>
         <a href="cadastro.html" class="card"><img src="img/cadastro.png"></a>
         <a href="manutencao.html" class="card"><img src="img/manutencao.png"></a>
@@ -191,35 +198,21 @@ body {
         <a href="diretoria.html" class="card"><img src="img/diretoria.png"></a>
         <a href="compras.html" class="card"><img src="img/compras.png"></a>
         <a href="problemas.html" class="card"><img src="img/problemas.png"></a>
-        </a>
     </div>
 </div>
 
 <!-- RODAPÉ -->
 <footer class="footer">
     <div class="footer-icons">
-        <a href="https://www.imoveispremiere.com.br" target="_blank">
-            <img src="img/site.png" alt="Site">
-        </a>
-
-        <a href="https://wa.me/554195290606" target="_blank">
-            <img src="img/whatsapp.png" alt="WhatsApp">
-        </a>
-
-        <a href="mailto:gustavo.vaz@premiereimoveis.com.br">
-            <img src="img/email.png" alt="E-mail">
-        </a>
-
-         <a href="https://www.youtube.com/channel/UCGEXfWxMYZiee2xZK3BWiwA/videos">
-            <img src="img/youtube.png" alt="YouTube">
-        </a>
-
-         <a href="https://www.instagram.com/premiere_imoveis/">
-            <img src="img/instagram.png" alt="Instagram">
-        </a>
+        <a href="https://www.imoveispremiere.com.br" target="_blank"><img src="img/site.png"></a>
+        <a href="https://wa.me/554195290606" target="_blank"><img src="img/whatsapp.png"></a>
+        <a href="mailto:gustavo.vaz@premiereimoveis.com.br"><img src="img/email.png"></a>
+        <a href="https://www.youtube.com/channel/UCGEXfWxMYZiee2xZK3BWiwA/videos"><img src="img/youtube.png"></a>
+        <a href="https://www.instagram.com/premiere_imoveis/"><img src="img/instagram.png"></a>
     </div>
 
-    <p>© 2026 · Premiere Imóveis · Todos os direitos reservados</p> <p> Autor: Gustavo Castro</p>
+    <p>© 2026 · Premiere Imóveis · Todos os direitos reservados</p>
+    <p>Autor: Gustavo Castro</p>
 </footer>
 
 <script>
