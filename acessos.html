@@ -48,18 +48,23 @@ body {
     color: #fff;
 }
 
-.topo-content img {
-    max-height: 95px;
-    margin-bottom: 6px;
+/* ÁREA INVISÍVEL CLICÁVEL (LOGO) */
+.logo-click {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 95px;
+    cursor: pointer;
 }
 
 .topo-content h1 {
-    margin: 0;
+    margin: 110px;
     font-size: 28px;
 }
 
 .topo-content p {
-    margin: 6px 0 0;
+    margin: -110px 0 0;
     font-size: 14px;
     opacity: 0.9;
 }
@@ -189,9 +194,10 @@ body {
 <!-- TOPO -->
 <div class="topo">
     <div class="topo-content">
-        <a href="index.html">
-            <img src="img/logo.png" alt="Premiere Imóveis">
-        </a>
+
+        <!-- ÁREA INVISÍVEL CLICÁVEL -->
+        <a href="index.html" class="logo-click" aria-label="Voltar para a página inicial"></a>
+
         <h1>Acessos</h1>
         <p>Selecione a solicitação</p>
     </div>
