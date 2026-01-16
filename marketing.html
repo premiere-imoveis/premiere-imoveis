@@ -44,6 +44,16 @@ body {
     color: #fff;
 }
 
+/* ÁREA INVISÍVEL CLICÁVEL (LOGO) */
+.logo-click {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px;
+    height: 90px;
+    cursor: pointer;
+}
+
 .topo-content h1 {
     margin: 110px;
     font-size: 28px;
@@ -70,6 +80,7 @@ body {
 
 /* CARDS */
 .card {
+    position: relative;
     width: 300px;
     height: 110px;
     border-radius: 14px;
@@ -77,16 +88,30 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    border: 3px solid transparent;
+    transition: border-color 0.25s ease;
+}
+
 .card:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 14px 30px rgba(0,0,0,0.25);
 }
 
+.card:hover::after {
+    border-color: #ffffff;
+}
+
 .card img {
     width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 14px;
-    display: block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* VOLTAR */
@@ -116,13 +141,13 @@ body {
 }
 
 .footer-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 48px;
     height: 48px;
     background: #006b67;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: transform 0.25s ease, background 0.25s ease;
 }
 
@@ -156,6 +181,10 @@ body {
         margin: 0 auto;
     }
 
+    .card img {
+        max-width: 100%;
+    }
+
     .topo {
         height: 160px;
     }
@@ -177,13 +206,19 @@ body {
 
 <body>
 
+<!-- TOPO -->
 <div class="topo">
     <div class="topo-content">
+
+        <!-- ÁREA INVISÍVEL CLICÁVEL -->
+        <a href="index.html" class="logo-click" aria-label="Voltar para a página inicial"></a>
+
         <h1>Marketing</h1>
         <p>Selecione a solicitação</p>
     </div>
 </div>
 
+<!-- CONTEÚDO -->
 <div class="conteudo">
     <div class="menu">
         <a href="https://forms.clickup.com/9017121514/f/8cqcpqa-31697/R2U21FYYNDAHDP97LQ" class="card">
@@ -200,6 +235,7 @@ body {
     </div>
 </div>
 
+<!-- RODAPÉ -->
 <footer class="footer">
     <div class="footer-icons">
         <a href="https://www.imoveispremiere.com.br" target="_blank">
