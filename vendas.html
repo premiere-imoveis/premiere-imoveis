@@ -41,18 +41,24 @@ body {
     color: #fff;
 }
 
-.topo-content img {
-    max-height: 90px;
-    margin-bottom: 8px;
+/* ÁREA INVISÍVEL CLICÁVEL (LOGO) */
+.logo-click {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 112px;
+    height: 112px;
+    cursor: pointer;
 }
 
+/* TÍTULO */
 .topo-content h1 {
-    margin: 0;
+    margin: 110px;
     font-size: 28px;
 }
 
 .topo-content p {
-    margin: 5px 0 0;
+    margin: -110px 0 0;
     font-size: 14px;
     opacity: 0.9;
 }
@@ -160,7 +166,7 @@ body {
     margin: 4px 0;
 }
 
-/* MOBILE FINO */
+/* MOBILE */
 @media (max-width: 480px) {
     .topo {
         height: 160px;
@@ -182,9 +188,7 @@ body {
 <!-- TOPO -->
 <div class="topo">
     <div class="topo-content">
-        <a href="index.html">
-            <img src="img/logo.png" alt="Premiere Imóveis">
-        </a>
+        <a href="index.html" class="logo-click" aria-label="Voltar para a página inicial"></a>
         <h1>Vendas</h1>
         <p>Selecione a solicitação</p>
     </div>
@@ -212,25 +216,11 @@ body {
 <!-- RODAPÉ -->
 <footer class="footer">
     <div class="footer-icons">
-        <a href="https://www.imoveispremiere.com.br" target="_blank">
-            <img src="img/site.png" alt="Site">
-        </a>
-
-        <a href="https://wa.me/554195290606" target="_blank">
-            <img src="img/whatsapp.png" alt="WhatsApp">
-        </a>
-
-        <a href="mailto:gustavo.vaz@premiereimoveis.com.br">
-            <img src="img/email.png" alt="E-mail">
-        </a>
-
-        <a href="https://www.youtube.com/channel/UCGEXfWxMYZiee2xZK3BWiwA/videos">
-            <img src="img/youtube.png" alt="YouTube">
-        </a>
-
-        <a href="https://www.instagram.com/premiere_imoveis/">
-            <img src="img/instagram.png" alt="Instagram">
-        </a>
+        <a href="https://www.imoveispremiere.com.br" target="_blank"><img src="img/site.png" alt="Site"></a>
+        <a href="https://wa.me/554195290606" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+        <a href="mailto:gustavo.vaz@premiereimoveis.com.br"><img src="img/email.png" alt="E-mail"></a>
+        <a href="https://www.youtube.com/channel/UCGEXfWxMYZiee2xZK3BWiwA/videos"><img src="img/youtube.png" alt="YouTube"></a>
+        <a href="https://www.instagram.com/premiere_imoveis/"><img src="img/instagram.png" alt="Instagram"></a>
     </div>
 
     <p>© 2026 · Premiere Imóveis · Todos os direitos reservados</p>
