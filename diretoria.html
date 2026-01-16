@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#00403e">
 
-<!-- PWA -->
 <link rel="manifest" href="manifest.json">
 
 <style>
@@ -45,19 +44,23 @@ body {
     color: #fff;
 }
 
-.topo-content a img {
-    max-height: 90px;
-    margin-bottom: 8px;
+/* ÁREA INVISÍVEL CLICÁVEL (SUBSTITUI A LOGO) */
+.logo-click {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px;
+    height: 90px;
     cursor: pointer;
 }
 
 .topo-content h1 {
-    margin: 0;
+    margin: 110px;
     font-size: 28px;
 }
 
 .topo-content p {
-    margin: 5px 0 0;
+    margin: -110px 0 0;
     font-size: 14px;
     opacity: 0.9;
 }
@@ -66,7 +69,7 @@ body {
     padding: 40px 20px;
 }
 
-/* GRID DE CARDS (CENTRALIZADO) */
+/* GRID DE CARDS */
 .menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
@@ -108,10 +111,9 @@ body {
     height: auto;
     border-radius: 14px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* BOTÃO VOLTAR CENTRALIZADO */
+/* VOLTAR */
 .voltar {
     margin-top: 40px;
 }
@@ -174,16 +176,19 @@ body {
 
 <body>
 
+<!-- TOPO -->
 <div class="topo">
     <div class="topo-content">
-        <a href="index.html">
-            <img src="img/logo.png" alt="Premiere Imóveis">
-        </a>
+
+        <!-- LINK INVISÍVEL -->
+        <a href="index.html" class="logo-click" aria-label="Voltar para a página inicial"></a>
+
         <h1>Diretoria</h1>
         <p>Selecione a solicitação</p>
     </div>
 </div>
 
+<!-- CONTEÚDO -->
 <div class="conteudo">
     <div class="menu">
         <a href="index.html" class="card">
@@ -196,24 +201,21 @@ body {
     </div>
 </div>
 
+<!-- RODAPÉ -->
 <footer class="footer">
     <div class="footer-icons">
         <a href="https://www.imoveispremiere.com.br" target="_blank">
             <img src="img/site.png" alt="Site">
         </a>
-
         <a href="https://wa.me/554195290606" target="_blank">
             <img src="img/whatsapp.png" alt="WhatsApp">
         </a>
-
         <a href="mailto:gustavo.vaz@premiereimoveis.com.br">
             <img src="img/email.png" alt="E-mail">
         </a>
-
         <a href="https://www.youtube.com/channel/UCGEXfWxMYZiee2xZK3BWiwA/videos">
             <img src="img/youtube.png" alt="YouTube">
         </a>
-
         <a href="https://www.instagram.com/premiere_imoveis/">
             <img src="img/instagram.png" alt="Instagram">
         </a>
